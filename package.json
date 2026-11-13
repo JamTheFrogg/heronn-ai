@@ -1,0 +1,42 @@
+{
+  "name": "heronn",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,web \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "tsx watch server/index.ts",
+    "dev:web": "vite --config web/vite.config.ts",
+    "loadgen": "tsx loadgen/run.ts",
+    "loadgen:setup": "tsx loadgen/setup.ts",
+    "loadgen:capture": "tsx loadgen/capture.ts",
+    "loadgen:baseline": "tsx loadgen/baseline.ts",
+    "loadgen:stats": "tsx loadgen/stats.ts",
+    "test:blacklist": "tsx --test server/policy/blacklist.test.ts",
+    "test:evaluate": "tsx --test server/policy/evaluate.test.ts",
+    "test:policy": "tsx --test server/policy/blacklist.test.ts server/policy/evaluate.test.ts server/policy/classifyCmd.test.ts",
+    "test:issues": "node scripts/issues.mjs",
+    "test:reset": "node scripts/reset-issues-learned.mjs"
+  },
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "better-sqlite3": "^12.2.0",
+    "express": "^5.1.0",
+    "gsap": "^3.15.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/express": "^5.0.3",
+    "@types/node": "^22.18.0",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.2",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5"
+  }
+}

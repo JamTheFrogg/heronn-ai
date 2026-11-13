@@ -1,0 +1,52 @@
+{
+  "blacklist": {
+    "prefixes": [
+      "rm -rf /",
+      "rm -rf /*",
+      "git push --force",
+      "git push -f",
+      "git reset --hard",
+      "chmod 777",
+      "mkfs",
+      "dd if=",
+      ":(){ :|:& };:",
+      "sudo dd",
+      "sudo mkfs"
+    ],
+    "bins": [
+      "dd",
+      "mkfs",
+      "shutdown",
+      "reboot",
+      "format",
+      "diskpart"
+    ]
+  },
+  "classMap": {
+    "npm": "dependency",
+    "pnpm": "dependency",
+    "yarn": "dependency",
+    "bun": "dependency",
+    "npx": "dependency",
+    "pip": "dependency",
+    "pip3": "dependency",
+    "poetry": "dependency",
+    "cargo": "dependency"
+  },
+  "machine": {
+    "allowClasses": [],
+    "allowPrefixes": [],
+    "decisions": []
+  },
+  "projects": {
+    "my-repo": {
+      "allowClasses": [
+        "dependency"
+      ],
+      "allowPrefixes": [
+        "npm install"
+      ],
+      "decisions": []
+    }
+  }
+}

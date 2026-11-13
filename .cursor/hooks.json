@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeShellExecution": [
+      {
+        "command": "node .cursor/hooks/relay.mjs",
+        "timeout": 540,
+        "failClosed": true
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": "node .cursor/hooks/relay.mjs",
+        "timeout": 30
+      }
+    ],
+    "preToolUse": [
+      {
+        "command": "node .cursor/hooks/relay.mjs",
+        "timeout": 540,
+        "failClosed": true,
+        "matcher": "Write|StrReplace|Delete|Edit"
+      }
+    ],
+    "beforeMCPExecution": [
+      {
+        "command": "node .cursor/hooks/relay.mjs",
+        "timeout": 540,
+        "failClosed": true
+      }
+    ],
+    "postToolUse": [
+      {
+        "command": "node .cursor/hooks/relay.mjs",
+        "timeout": 30,
+        "matcher": "Shell"
+      }
+    ]
+  }
+}
