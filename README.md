@@ -1,6 +1,8 @@
-# Heronn
+# Heronn: a local policy daemon for Claude Code and Cursor hooks
 
-A local policy daemon for AI coding agents. Heronn sits between an agent (Claude Code, Cursor) and your machine: dangerous shell commands are blocked, known-safe command classes are allowed automatically, and everything else waits in a queue for you to approve or deny from a small web UI.
+Heronn is a local policy daemon for AI coding agents such as Claude Code and Cursor. Agent hooks send each intended shell command or file edit to Heronn first: dangerous commands are blocked, known-safe command classes are allowed automatically, and everything else waits in a queue for you to approve or deny from a small web UI. It was built by a team of four at Adria Hack (September 2026) and is a hackathon prototype.
+
+Case study: [faris.srnja.com/work/heronn](https://faris.srnja.com/work/heronn)
 
 AI coding agents run shell commands and edit files on your behalf, and per-tool permission prompts are easy to click through or are all-or-nothing. Heronn gives you one place to set the rules once (blacklist, allow rules per command class, per project or per machine) and review only the commands that no rule covers.
 

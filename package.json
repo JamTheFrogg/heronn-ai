@@ -1,5 +1,20 @@
 {
   "name": "heronn",
+  "description": "Local policy daemon for Claude Code and Cursor hooks: block, auto-allow or review commands.",
+  "keywords": [
+    "claude-code",
+    "cursor",
+    "ai-agents",
+    "coding-agents",
+    "hooks",
+    "policy-engine",
+    "permissions"
+  ],
+  "homepage": "https://faris.srnja.com/work/heronn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JamTheFrogg/heronn-ai.git"
+  },
   "license": "MIT",
   "private": true,
   "type": "module",
